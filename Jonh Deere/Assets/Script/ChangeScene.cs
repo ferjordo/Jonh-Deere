@@ -2,20 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ChangeScene : MonoBehaviour {
 
-	// Use this for initialization
+public string Name;
+	
+	
 	void Start () {
-		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	void FixedUpdate () {
+
 	}
-	//Use to change the scene
-	public void GoToScene(string scenename){
-        SceneManager.LoadScene(scenename);
+/*
+ PlayerPrefs.SetInt("Player Score", 10);
+ */
+
+
+	void Update(){
+//Debug.Log("Se ha dado count");
+  
 	}
+	
+	void  OnMouseDown() {
+		//Debug.Log("Se ha dado Clic");
+		SceneManager.LoadScene(Name);
+
+    }
 }
