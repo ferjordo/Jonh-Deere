@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Opcion2 : MonoBehaviour {
+public AudioSource audio;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +16,7 @@ public class Opcion2 : MonoBehaviour {
 		
 	}
 	void  OnMouseDown() {
+		audio.Play();
 		PlayerPrefs.DeleteAll();
 		
 		SceneManager.LoadScene("Inicio");

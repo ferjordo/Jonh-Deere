@@ -10,6 +10,7 @@ public class avance : MonoBehaviour {
 	public  GameObject x5, y5 , all5;
 	public  GameObject x6, y6 , all6;
 	public  GameObject x7, y7 , all7;
+	 int  fianlAciertos = 0;
 
 
 	// Use this for initialization
@@ -20,7 +21,95 @@ public class avance : MonoBehaviour {
 		Debug.Log("Aciertos: "+PlayerPrefs.GetInt("aciertos"));
 		 switch (PlayerPrefs.GetInt("nivel"))
         {
+			
+		case 7:
+		if(PlayerPrefs.GetInt("1")==1){
+			Destroy(x1);
+			fianlAciertos++;
+		}else{
+			Destroy(y1);
+		}
+		if(PlayerPrefs.GetInt("2")==1){
+			Destroy(x2);
+						fianlAciertos++;
+
+		}else{
+			Destroy(y2);
+		}
+		if(PlayerPrefs.GetInt("3")==1){
+			Destroy(x3);
+						fianlAciertos++;
+
+		}else{
+			Destroy(y3);
+		}
+		if(PlayerPrefs.GetInt("4")==1){
+			Destroy(x4);
+						fianlAciertos++;
+
+		}else{
+			Destroy(y4);
+		}
+		if(PlayerPrefs.GetInt("5")==1){
+			Destroy(x5);
+					fianlAciertos++;
+
+		}else{
+			Destroy(y5);
+		}
+		if(PlayerPrefs.GetInt("6")==1){
+			Destroy(x6);
+			fianlAciertos++;
+
+		}else{
+			Destroy(y6);
+		}
+		if(PlayerPrefs.GetInt("7")==1){
+			Destroy(x7);
+			fianlAciertos++;
+
+		}else{
+			Destroy(y7);
+		}
+PlayerPrefs.SetInt("aciertos",fianlAciertos);
 		
+            break;
+			
+		case 6:
+		if(PlayerPrefs.GetInt("1")==1){
+			Destroy(x1);
+		}else{
+			Destroy(y1);
+		}
+		if(PlayerPrefs.GetInt("2")==1){
+			Destroy(x2);
+		}else{
+			Destroy(y2);
+		}
+		if(PlayerPrefs.GetInt("3")==1){
+			Destroy(x3);
+		}else{
+			Destroy(y3);
+		}
+		if(PlayerPrefs.GetInt("4")==1){
+			Destroy(x4);
+		}else{
+			Destroy(y4);
+		}
+		if(PlayerPrefs.GetInt("5")==1){
+			Destroy(x5);
+		}else{
+			Destroy(y5);
+		}
+		if(PlayerPrefs.GetInt("6")==1){
+			Destroy(x6);
+		}else{
+			Destroy(y6);
+		}
+
+		Destroy(all7);
+		
+            break;
         case 5:
 		if(PlayerPrefs.GetInt("1")==1){
 			Destroy(x1);

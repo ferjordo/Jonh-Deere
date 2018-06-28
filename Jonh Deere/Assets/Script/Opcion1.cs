@@ -10,6 +10,8 @@ public Transform mark;
 
 public Transform clicPos;
 public Transform clicMark;
+public AudioSource audio;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -20,6 +22,7 @@ public Transform clicMark;
 		
 	}
 	void  OnMouseDown() {
+		audio.Play();
 		//Debug.Log("Clic");
 		mark.position = new Vector2 (pos.position.x, pos.position.y);
 		clicMark.position =  new Vector2 (clicPos.position.x, clicPos.position.y);
@@ -27,7 +30,7 @@ public Transform clicMark;
 		
 		if(correcto){
 			PlayerPrefs.SetInt (""+nivel,1);// Dice si aprobo o no este nivel q esta jugando
-			PlayerPrefs.SetInt("aciertos", PlayerPrefs.GetInt("aciertos")+1 );// cuenta las cantidad de aciertos
+			//PlayerPrefs.SetInt("aciertos", PlayerPrefs.GetInt("aciertos")+1 );// cuenta las cantidad de aciertos
 		}else{
 			PlayerPrefs.SetInt (""+nivel,0);// Dice si aprobo o no este nivel q esta jugando
 
